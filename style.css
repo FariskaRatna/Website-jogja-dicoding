@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+    background-color: #fee3ec;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* pengaturan navigasi */
+nav {
+    display: flex;
+    background-color: #F3C5C5;
+    justify-content: space-around;
+    padding: 10px 0;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+nav .logo img {
+    width: 200px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    list-style: none;
+}
+nav ul li a {
+    color: #694E4E;
+    text-decoration: none;
+    font-size: 17px;
+}
+nav ul li a:hover {
+    color: #362222;
+    font-weight: bolder;
+}
+
+/* pengaturan hamburger menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    height: 20px;
+    justify-content: space-between;
+}
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #362222;
+}
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -7px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #362222;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+/* Hamburger Menu animation */
+.menu-toggle span:nth-child(2) {
+   transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+ }
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:last-child {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0)
+}
+
+/* pengaturan header home */
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -2;
+    font-family: 'Lora', serif;
+}
+#home img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    object-fit: cover;
+}
+#home .pembuka {
+    text-align: center;
+    top: 50%;
+    position: relative;
+    z-index: 100;
+    color: #FEECE9;
+}
+#home .pembuka h3 {
+    font-size: 40px;
+    color: #F3C5C5;
+    padding: 5px;
+}
+#home .pembuka p {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+/* pengaturan konten */
+article {
+    padding: 50px 0px 50px 0px;
+    background-color: #F3C5C5;
+}
+article h3 {
+    font-size: 35px;
+    text-align: center;
+    color: #362706;
+}
+article h3::after {
+    content: "";
+    border-bottom: 5px solid #886F6F;
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+article p {
+    font-style: normal;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-indent: 60px;
+}
+article p.resume {
+    text-align: center;
+    padding-bottom: 10px;
+    text-align: center;
+    font-style: italic;
+    text-indent: 0px;
+    color: #694E4E;
+    font-size: 16px;
+}
+.geo {
+    justify-content: space-between;
+    text-align: center;
+}
+.geo img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.geo img:hover {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+article#galeri div img {
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+}
+article#galeri {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+article#galeri div {
+    padding: 10px;
+}
+article#galeri div img:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+article.cream {
+    background-color: #ffccd2;
+}
+article.pink {
+    background-color: #ffeded;
+}
+
+/* aside */
+.me {
+    text-align: center;
+}
+.me img {
+    width: 300px;
+    border-radius: 10px;
+}
+.profil h2 {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    color: #362706;
+}
+.profil table {
+    text-align: center;
+    padding-left: 38%;
+}
+
+/* pengaturan efek card */
+.card {
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.card1 {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fee3ec;
+    
+}
+/* pengaturan footer */
+article.kutipan {
+    width: 100%;
+    margin: auto;
+    background: url("assets/images/tugu1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fee3ec;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+footer {
+    margin-top: 20px;
+}
+
+
+/* pengaturan untuk dibawah 1000px */
+@media screen and (max-width: 1000px) {
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F3C5C5;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul.slide {
+        transform: translateX(0);
+    }
+    article p {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .geo img {
+        width: 150px;
+        height: 120px;
+    }
+    .me img {
+        width: 200px;
+    }
+    .profil table {
+        padding-left: 20%;
+    }
+}
